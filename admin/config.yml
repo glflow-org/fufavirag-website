@@ -1,0 +1,36 @@
+# V7 ELŐKÉSZÍTÉS: GitHub OAuth bejelentkezés nélkül még nem használható.
+backend:
+  name: github
+  repo: glflow-org/fufavirag-website
+  branch: main
+  # base_url: https://SAJAT-BIZTONSAGOS-OAUTH-SZOLGALTATAS
+  # auth_endpoint: auth
+media_folder: images/uploads
+public_folder: images/uploads
+locale: hu
+collections:
+  - name: content
+    label: Honlap tartalmai
+    files:
+      - name: offers
+        label: Szezonális ajánlatok
+        file: content/offers.json
+        fields:
+          - label: Ajánlatok
+            name: items
+            widget: list
+            fields:
+              - {label: Cím, name: title, widget: string}
+              - {label: Leírás, name: description, widget: text}
+              - {label: Kép, name: image, widget: image}
+              - {label: Közzétéve, name: published, widget: boolean, default: false}
+      - name: gallery
+        label: Galéria
+        file: content/gallery.json
+        fields:
+          - label: Képek
+            name: items
+            widget: list
+            fields:
+              - {label: Fotó, name: image, widget: image}
+              - {label: Képleírás, name: alt, widget: string}
