@@ -1,12 +1,13 @@
-# V8 – Decap CMS. A bejelentkezéshez külön GitHub OAuth közvetítő szükséges.
-# FONTOS: GitHub OAuth Client Secret vagy személyes token SOHA nem kerülhet ebbe a fájlba.
+# Fű-Fa-Virág – Decap CMS konfiguráció
+# GitHub OAuth hitelesítés Cloudflare Worker segítségével
+
 backend:
   name: github
   repo: glflow-org/fufavirag-website
   branch: main
-  # OAuth közvetítő beállítása után:
-  # base_url: https://AZ-OAUTH-KOZVETITO-DOMAINED
-  # auth_endpoint: auth
+  base_url: https://fufavirag-cms-auth.stremenbence83-823.workers.dev
+  auth_endpoint: auth
+  site_domain: glflow-org.github.io
 
 media_folder: images/uploads
 public_folder: images/uploads
